@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prancheta Tática Digital</title>
+    <link rel="stylesheet" href="css/style.css"> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</head>
+
+<body>
+      <header class="header-principal">
+        <div class="container">
+            <img src="img/logo-med-65.PNG" alt="Logo do Site" id="logo-principal">
+        </div>
+    </header>
+<br>
+    <div class="main-container">
+        <div class="controls">
+            <button id="tool-move-btn" class="active">Mover</button>
+            <div class="tool-separator"></div>
+            <button id="tool-brush-btn">Pincel</button>
+            <button id="tool-line-btn">Linha</button>
+            <button id="tool-arrow-btn">Seta</button>
+            <button id="tool-dashed-btn">Tracejado</button>
+            <button id="tool-eraser-btn">Borracha</button>
+            <div class="tool-separator"></div>
+            <button id="clear-drawing-btn">Limpar Desenho</button>
+            <button id="reset-pieces-btn">Resetar Peças</button>
+            <button id="export-btn">Exportar PNG</button>
+        </div>
+
+        <div id="game-area">
+            <div id="field-container">
+                <canvas id="drawing-canvas"></canvas>
+            </div>
+            <div id="bench">
+                </div>
+        </div>
+
+        <div class="saved-plays-controls">
+            <input type="text" id="play-name-input" placeholder="Nome da Jogada">
+            <button id="save-play-btn">Guardar</button>
+            <div class="tool-separator"></div>
+            <select id="saved-plays-select"></select>
+            <button id="load-play-btn">Carregar</button>
+            <button id="delete-play-btn">Apagar</button>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
