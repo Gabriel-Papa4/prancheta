@@ -103,9 +103,8 @@ body {
 
 #field-container {
     position: relative;
-    /* Usando aspect-ratio para manter a proporção do campo */
     width: 75vw;
-    aspect-ratio: 1050 / 680; /* Proporção aproximada de um campo */
+    aspect-ratio: 1050 / 680;
     background-image: url('../campo-fut7.png');
     background-size: cover;
     background-position: center;
@@ -124,7 +123,6 @@ body {
 
 #bench {
     width: 150px;
-    /* A altura do banco se alinha com a do campo */
     height: calc(75vw * (680 / 1050));
     min-height: 400px;
     background-color: #c0c0c0;
@@ -151,11 +149,11 @@ body {
     user-select: none;
     box-shadow: 0 2px 5px rgba(0,0,0,0.5);
     position: absolute;
-    z-index: 10; /* Garante que as peças fiquem sobre o canvas */
+    z-index: 10;
 }
 
 #bench .player-piece, #bench .red-piece {
-    position: static; /* Peças no banco se comportam normalmente */
+    position: static;
 }
 
 .player-piece {
@@ -177,12 +175,10 @@ body {
 }
 
 /* --- MEDIA QUERIES PARA RESPONSIVIDADE --- */
-
-/* Celulares em modo Paisagem (deitado) e telas menores */
 @media (max-width: 900px) {
     .player-piece, .red-piece {
-        width: 40px;
-        height: 40px;
+        width: 45px;
+        height: 45px;
     }
     .player-number {
         font-size: 12px;
@@ -192,7 +188,6 @@ body {
     }
 }
 
-/* Celulares em modo Retrato (em pé) */
 @media (max-width: 600px) {
     #game-area {
         flex-direction: column;
@@ -200,29 +195,35 @@ body {
     }
 
     #field-container {
-        width: 95vw; /* O campo ocupa quase toda a largura */
-        /* A altura é calculada com base na proporção original */
+        width: 95vw;
         height: calc(95vw * (680 / 1050));
         transform: rotate(90deg);
-        /* Ajuste na margem para compensar a rotação e centralizar */
         margin-top: calc((95vw - (95vw * (680 / 1050))) / 2);
         margin-bottom: calc((95vw - (95vw * (680 / 1050))) / 2);
     }
 
+    /**
+     * NOVA REGRA: Contra-rotação das peças para manter o texto legível.
+     */
+    #field-container .player-piece,
+    #field-container .red-piece {
+        transform: rotate(-90deg);
+    }
+
     #bench {
         width: 95vw;
-        height: auto; /* Altura automática */
+        height: auto;
         min-height: 0;
-        flex-wrap: nowrap; /* Peças em uma única linha */
-        overflow-x: auto; /* Scroll horizontal para as peças */
+        flex-wrap: nowrap;
+        overflow-x: auto;
         overflow-y: hidden;
         padding: 8px;
-        height: 75px; /* Altura fixa para o banco horizontal */
-        order: 2; /* Coloca o banco depois da área de jogo */
+        height: 75px;
+        order: 2;
     }
 
     #bench .player-piece, #bench .red-piece {
-        flex-shrink: 0; /* Impede que as peças encolham */
+        flex-shrink: 0;
     }
 
     .controls, .saved-plays-controls {
