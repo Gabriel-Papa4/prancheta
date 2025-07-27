@@ -76,14 +76,14 @@ document.addEventListener('DOMContentLoaded', () => {
     ];
 
     const redTeamFormationHorizontal = [
-        { top: '50%', left: '95%' }, { top: '30%', left: '80%' },
+        { top: '50%', left: '88%' }, { top: '30%', left: '80%' },
         { top: '70%', left: '80%' }, { top: '25%', left: '65%' },
         { top: '50%', left: '65%' }, { top: '75%', left: '65%' },
         { top: '50%', left: '55%' }
     ];
 
     const redTeamFormationVertical = [
-        { top: '50%', left: '5%' },   { top: '30%', left: '20%' },
+        { top: '50%', left: '11%' },   { top: '30%', left: '20%' },
         { top: '70%', left: '20%' },  { top: '25%', left: '35%' },
         { top: '50%', left: '35%' },  { top: '75%', left: '35%' },
         { top: '50%', left: '45%' }
