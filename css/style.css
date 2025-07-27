@@ -183,6 +183,9 @@ body {
     .player-number {
         font-size: 12px;
     }
+    .player-name {
+        font-size: 8px; /* Opcional: ajustar nome também */
+    }
     #bench {
         width: 110px;
     }
@@ -195,16 +198,15 @@ body {
     }
 
     #field-container {
-        width: 95vw;
-        height: calc(95vw * (680 / 1050));
+        /* AJUSTE APLICADO AQUI: Aumentamos a largura base para que, ao rotacionar, o campo fique mais largo */
+        width: 145vw;
+        height: calc(145vw * (680 / 1050));
         transform: rotate(90deg);
-        margin-top: calc((95vw - (95vw * (680 / 1050))) / 2);
-        margin-bottom: calc((95vw - (95vw * (680 / 1050))) / 2);
+        /* As margens também são recalculadas para manter a centralização */
+        margin-top: calc((145vw - (145vw * (680 / 1050))) / 2);
+        margin-bottom: calc((145vw - (145vw * (680 / 1050))) / 2);
     }
 
-    /**
-     * NOVA REGRA: Contra-rotação das peças para manter o texto legível.
-     */
     #field-container .player-piece,
     #field-container .red-piece {
         transform: rotate(-90deg);
