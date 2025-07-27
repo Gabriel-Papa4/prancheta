@@ -177,8 +177,8 @@ body {
 /* --- MEDIA QUERIES PARA RESPONSIVIDADE --- */
 @media (max-width: 900px) {
     .player-piece, .red-piece {
-        width: 45px;
-        height: 45px;
+        width: 35px;
+        height: 35px;
     }
     .player-number {
         font-size: 12px;
